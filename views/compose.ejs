@@ -1,0 +1,111 @@
+
+<%- include("partials/header"); -%>
+    <h1>Compose</h1>
+    <form class="" action="/compose" method="post">
+      <div class="form-group">
+        <label>Name</label>
+        <input class="form-control form-control-sm" type="text" name="fname">        
+        <label>Email</label>
+        <input class="form-control form-control-sm" type="text" name="email">
+        <label>Phone no.</label>
+        <input class="form-control form-control-sm" type="text" name="pno">
+        <label>Address</label>
+        <input class="form-control form-control-sm" type="text" name="addr">
+        <label>Portfolio link</label>
+        <input class="form-control form-control-sm" type="text" name="portlink">
+        <label>School/ College Name</label>
+        <input class="form-control form-control-sm" type="text" name="sname1">
+        <label>Level of teaching(degree)</label>
+        <input class="form-control form-control-sm" type="text" name="sdegree1">
+        <label>Description of the school/college</label>
+        <input class="form-control form-control-sm" type="text" name="sinfo1">
+        <label>School/ College Name</label>
+        <input class="form-control form-control-sm" type="text" name="sname2">
+        <label>Level of teaching(degree)</label>
+        <input class="form-control form-control-sm" type="text" name="sdegree2">
+        <label>Description of the school/college</label>
+        <input class="form-control form-control-sm" type="text" name="sinfo2">
+        <label>Skill</label>
+        <input class="form-control form-control-sm" type="text" name="skill1">
+        <label>Skill</label>
+        <input class="form-control form-control-sm" type="text" name="skill2">
+        <label>Skill</label>
+        <input class="form-control form-control-sm" type="text" name="skill3">
+        <label>Skill</label>
+        <input class="form-control form-control-sm" type="text" name="skill4">
+        <label>Skill</label>
+        <input class="form-control form-control-sm" type="text" name="skill5">
+        <label>Skill</label>
+        <input class="form-control form-control-sm" type="text" name="skill6">
+        <label>Personal profile/Mission Statement</label>
+        <input class="form-control form-control-sm" type="text" name="persprof">
+        <label>Work Title</label>
+        <input class="form-control form-control-sm" type="text" name="wname1">
+        <label>Work Duration(ex: 2018-2019)</label>
+        <input class="form-control form-control-sm" type="text" name="wtime1">
+        <label>Work Description</label>
+        <input class="form-control form-control-sm" type="text" name="wdesc1">
+        <label>Work Title</label>
+        <input class="form-control form-control-sm" type="text" name="wname2">
+        <label>Work Duration(ex: 2018-2019)</label>
+        <input class="form-control form-control-sm" type="text" name="wtime2">
+        <label>Work Description</label>
+        <input class="form-control form-control-sm" type="text" name="wdesc2">
+        <label>Work Title</label>
+        <input class="form-control form-control-sm" type="text" name="wname3">
+        <label>Work Duration(ex: 2018-2019)</label>
+        <input class="form-control form-control-sm" type="text" name="wtime3">
+        <label>Work Description</label>
+        <input class="form-control form-control-sm" type="text" name="wdesc3">
+        <label>Project Title</label>
+        <input class="form-control form-control-sm" type="text" name="pname1">
+        <label>Project Duration(ex: 2018-2019)</label>
+        <input class="form-control form-control-sm" type="text" name="ptime1">
+        <label>Project Description</label>
+        <input class="form-control form-control-sm" type="text" name="pdesc1">
+        <label>Project Title</label>
+        <input class="form-control form-control-sm" type="text" name="pname2">
+        <label>Project Duration(ex: 2018-2019)</label>
+        <input class="form-control form-control-sm" type="text" name="ptime2">
+        <label>Project Description</label>
+        <input class="form-control form-control-sm" type="text" name="pdesc2">
+        <label>Project Title</label>
+        <input class="form-control form-control-sm" type="text" name="pname3">
+        <label>Project Duration(ex: 2018-2019)</label>
+        <input class="form-control form-control-sm" type="text" name="ptime3">
+        <label>Project Description</label>
+        <input class="form-control form-control-sm" type="text" name="pdesc3">        
+      </div>
+      <button class="btn btn-primary hidden publish" type="submit" name="button">Publish</button>
+    </form>   
+    <button class = 'all section1' onclick=<%= clickHandler1 %>>Next section</button>
+    <button class = 'all section2 hidden' onclick=<%= clickHandler2 %>>Next section</button>
+    <button class = 'all section3 hidden' onclick=<%= clickHandler3 %>>Next section</button>
+    <button class = 'all section4 hidden' onclick=<%= clickHandler4 %>>Next section</button>
+
+  </div>
+  <div class="footer-padding"></div>
+    <div class="footer"></div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script>
+    function func1() {
+      $('.section2').removeClass('hidden')
+      $('.all').not('.section2').addClass('hidden')
+    }
+    function func2() {
+      $('.section3').removeClass('hidden')
+      $('.all').not('.section3').addClass('hidden')
+    }
+    function func3() {
+      $('.section4').removeClass('hidden')
+      $('.all').not('.section4').addClass('hidden')
+    }
+    function func4() {
+      $('.publish').removeClass('hidden')
+      $('.all').not('.publish').addClass('hidden')
+    }
+  </script>
+  </body>
+  </html>
+  
