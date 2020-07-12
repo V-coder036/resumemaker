@@ -9,11 +9,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "alert": "^5.0.0",
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "html-pdf": "^2.2.0",
+    "js-alert": "^1.0.4",
     "lodash": "^4.17.11",
-    "mongoose": "^5.3.6"
+    "mongoose": "^5.3.6",
+    "sweetalert": "^2.1.2",
+    "sweetalert2": "^9.15.3"
   }
 }

@@ -7,6 +7,29 @@ html {
     padding-top: 70px;
     padding-bottom: 70px;
 }
+
+.heading {
+  padding: 2rem 0;
+  margin: 4rem 0;
+  font-size: 3rem;
+}
+
+.resumename {
+  margin-bottom: 3rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
 .navbar {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -30,7 +53,7 @@ html {
 	bottom: 0;
 	width: 100%;
 	height: 60px;
-	background-color: #1abc9c;
+	background-color: #007bff;
 }
 
 .footer p {
@@ -45,4 +68,80 @@ html {
 
 iframe {
   width: 100%;
+}
+
+.btn-group {
+  position: relative;
+  left: 25%;
+}
+
+.secthead {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.publish {
+  margin-bottom: 3rem;
+}
+
+.tempimgtext {
+  text-align: justify;
+  width: 450px;
+
+}
+
+.tempimg {
+  padding: 1rem;
+  width: 200px;
+  height: 300px;
+}
+
+.left {
+  position: relative;
+  left: 100px;
+  
+}
+
+.right {
+  position: relative;
+  left: 300px;
+}
+
+.mainbtns {
+  margin: 2rem 0;
+}
+
+.preview {
+  height: 500px;
+  width: 350px;
+}
+
+.mainthing {
+  text-align: center;
+  position: relative;
+  top: 15rem;
+}
+
+.login-buttons {
+  margin-top: 4rem;
+}
+
+.maintext {
+  font-size: 6rem;
+}
+
+.logintext {
+  margin: 5rem 0;
+}
+
+.onepreview {
+  margin: 3rem 0;
+}
+
+.btnsgroups {
+  margin-bottom: 2rem;
+}
+
+input {
+  margin-bottom: 2rem;
 }

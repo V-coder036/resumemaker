@@ -1,0 +1,152 @@
+
+<%- include("partials/header"); -%>
+<h1 class="logintext">Edit</h1>
+<div class="btnsgroups btn-group">
+  <button class = 'btn btn-primary btn1 allbtns section1 active' onclick=<%= ch1 %>>Basic info</button>
+  <button class = 'btn btn-primary btn2 allbtns section2' onclick=<%= ch2 %>>Academics</button>
+  <button class = 'btn btn-primary btn3 allbtns section3' onclick=<%= ch3 %>>Skills</button>
+  <button class = 'btn btn-primary btn4 allbtns section4' onclick=<%= ch4 %>>Work History</button>
+  <button class = 'btn btn-primary btn5 allbtns ssection5' onclick=<%= ch5 %>>Important Projects</button>
+</div>
+<form autocomplete="off" class="" action="/edit/<%=id%>" method="post">
+  <div class="form-group">
+    <div class = ' all section1'>
+        <label>Template</label>
+        <input class="form-control" type="text" value="<%=template%>" name="whichtemp">
+      <label>Name</label>
+    <input class="form-control form-control-sm" type="text" value="<%=name%>" name="fname">        
+    <label>Email</label>
+    <input class="form-control form-control-sm" type="text" value="<%=email%>" name="email">
+    <label>Phone no.</label>
+    <input class="form-control form-control-sm" type="text" value="<%=phoneno%>" name="pno">
+    <label>Address</label>
+    <input class="form-control form-control-sm" type="text" value="<%=address%>" name="addr">
+    <label>Portfolio link</label>
+    <input class="form-control form-control-sm" type="text" value="<%=portlink%>" name="portlink">
+    <label>Personal profile/Mission Statement</label>
+    <input class="form-control form-control-sm" type="text" value="<%=persprof%>" name="persprof">
+    </div>
+    <div class = 'all section2 hidden'>
+      <label class='secthead'> <em>Institution 1:</em> </label> <br>
+      <label>School/ College Name</label>
+    <input class="form-control form-control-sm" type="text" value="<%=sname1%>" name="sname1">
+    <label>Level of teaching(degree)</label>
+    <input class="form-control form-control-sm" type="text" value="<%=squal1%>" name="sdegree1">
+    <label>Description of the school/college</label>
+    <input class="form-control form-control-sm" type="text" value="<%=sinfo1%>" name="sinfo1">
+    <label class="secthead"> <em>Institution 2:</em> </label> <br>
+    <label>School/ College Name</label>
+    <input class="form-control form-control-sm" type="text" value="<%=sname2%>" name="sname2">
+    <label>Level of teaching(degree)</label>
+    <input class="form-control form-control-sm" type="text" value="<%=squal2%>" name="sdegree2">
+    <label>Description of the school/college</label>
+    <input class="form-control form-control-sm" type="text" value="<%=sinfo2%>" name="sinfo2">
+    </div>
+    <div class = 'all section3 hidden'>
+      <label>1st Skill</label>
+    <input class="form-control form-control-sm" type="text" value="<%=skill1%>" name="skill1">
+    <label>2nd Skill</label>
+    <input class="form-control form-control-sm" type="text" value="<%=skill2%>" name="skill2">
+    <label>3rd Skill</label>
+    <input class="form-control form-control-sm" type="text" value="<%=skill3%>" name="skill3">
+    <label>4th Skill</label>
+    <input class="form-control form-control-sm" type="text" value="<%=skill4%>" name="skill4">
+    <label>5th Skill</label>
+    <input class="form-control form-control-sm" type="text" value="<%=skill5%>" name="skill5">
+    <label>6th Skill</label>
+    <input class="form-control form-control-sm" type="text" value="<%=skill6%>" name="skill6">
+    </div>
+    <div class = 'all section4 hidden'>
+      <label class = 'secthead'><em>Organisation 1:</em></label> <br>
+      <label>Work Title</label>
+    <input class="form-control form-control-sm" type="text" value="<%=wname1%>" name="wname1">
+    <label>Work Duration(ex: 2018-2019)</label>
+    <input class="form-control form-control-sm" type="text" value="<%=wtime1%>" name="wtime1">
+    <label>Work Description</label>
+    <input class="form-control form-control-sm" type="text" value="<%=wdesc1%>" name="wdesc1">
+    <label class = 'secthead'><em>Organisation 2:</em></label> <br>
+    <label>Work Title</label>
+    <input class="form-control form-control-sm" type="text" value="<%=wname2%>" name="wname2">
+    <label>Work Duration(ex: 2018-2019)</label>
+    <input class="form-control form-control-sm" type="text" value="<%=wtime2%>" name="wtime2">
+    <label>Work Description</label>
+    <input class="form-control form-control-sm" type="text" value="<%=wdesc2%>" name="wdesc2">
+    <label class='secthead'><em>Organisation 3:</em></label> <br>
+    <label>Work Title</label>
+    <input class="form-control form-control-sm" type="text" value="<%=wname3%>" name="wname3">
+    <label>Work Duration(ex: 2018-2019)</label>
+    <input class="form-control form-control-sm" type="text" value="<%=wtime3%>" name="wtime3">
+    <label>Work Description</label>
+    <input class="form-control form-control-sm" type="text" value="<%=wdesc3%>" name="wdesc3">
+    </div>
+    
+    <div class = 'all section5 hidden'>
+      <label class="secthead"><em>Project 1:</em></label> <br>
+      <label>Project Title</label>
+    <input class="form-control form-control-sm" type="text" value="<%=pname1%>" name="pname1">
+    <label>Project Duration(ex: 2018-2019)</label>
+    <input class="form-control form-control-sm" type="text" value="<%=ptime1%>" name="ptime1">
+    <label>Project Description</label>
+    <input class="form-control form-control-sm" type="text" value="<%=pdesc1%>" name="pdesc1">
+    <label class="secthead"><em>Project 2:</em></label> <br>
+    <label>Project Title</label>
+    <input class="form-control form-control-sm" type="text" value="<%=pname2%>" name="pname2">
+    <label>Project Duration(ex: 2018-2019)</label>
+    <input class="form-control form-control-sm" type="text" value="<%=ptime2%>" name="ptime2">
+    <label>Project Description</label>
+    <input class="form-control form-control-sm" type="text" value="<%=pdesc2%>" name="pdesc2">
+    <label class="secthead"><em>Project 3:</em></label> <br>
+    <label>Project Title</label>
+    <input class="form-control form-control-sm" type="text" value="<%=pname3%>" name="pname3">
+    <label>Project Duration(ex: 2018-2019)</label>
+    <input class="form-control form-control-sm" type="text" value="<%=ptime3%>" name="ptime3">
+    <label>Project Description</label>
+    <input class="form-control form-control-sm" type="text" value="<%=pdesc3%>" name="pdesc3">  
+    </div>
+          
+  </div>
+  <button class="all btn btn-primary section5 hidden publish" type="submit" name="button">Publish</button>
+</form>   
+
+
+
+</div>
+<div class="footer-padding"></div>
+<div class="footer"></div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script>
+function func1() {
+  $('.section1').removeClass('hidden')
+  $('.all').not('.section1').addClass('hidden')
+  $('.btn1').addClass('active')
+  $('.allbtns').not('btn1').removeClass('active')
+}
+function func2() {
+  $('.section2').removeClass('hidden')
+  $('.all').not('.section2').addClass('hidden')
+  $('.btn2').addClass('active')
+  $('.allbtns').not('btn2').removeClass('active')
+}
+function func3() {
+  $('.section3').removeClass('hidden')
+  $('.all').not('.section3').addClass('hidden')
+  $('.btn3').addClass('active')
+  $('.allbtns').not('btn3').removeClass('active')
+}
+function func4() {
+  $('.section4').removeClass('hidden')
+  $('.all').not('.section4').addClass('hidden')
+  $('.btn4').addClass('active')
+  $('.allbtns').not('btn4').removeClass('active')
+}
+function func5() {
+  $('.section5').removeClass('hidden')
+  $('.all').not('.section5').addClass('hidden')
+  $('.btn5').addClass('active')
+  $('.allbtns').not('btn5').removeClass('active')
+}
+</script>
+</body>
+</html>
+
