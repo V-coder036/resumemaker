@@ -4,7 +4,6 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require('mongoose');
 const alert = require('alert')
-
 var pdf = require ('html-pdf');
 var options = { 
   format:'A4',  
@@ -69,6 +68,8 @@ const userSchema = {
     required:true},
   password:{
     type:String,
+    minlength:8,
+    match:/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])/,
     required:true}
 }
 
@@ -97,6 +98,7 @@ app.post('/register', function(req,res){
   
   newUser.save(function(err){
     if (err){
+      console.log(err)
       alert('Invalid data')
       res.redirect('/register')    
     }
