@@ -115,7 +115,7 @@ app.post('/login', function(req,res){
 
   User.findOne({email:username}, function(err, foundUser){
     if(err){
-      alert('Wrong email id')
+      alert('Invalid credentials')
       console.log(err)
     }else {
       if(foundUser) {
@@ -123,13 +123,13 @@ app.post('/login', function(req,res){
           res.redirect('/home')
         }
         else {
-          alert('Incorrect password')
+          alert('Invalid credentials')
           res.redirect('/login')
           
         }
       }
       else {
-        alert ('Wrong email id')
+        alert ('Invalid credentials')
         res.redirect('/login')
         
       }
